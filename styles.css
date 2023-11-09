@@ -6,76 +6,123 @@
 
 body {
     background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+
+
 .card {
-    display: flex;
-    flex-direction: row;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
     margin: auto;
-    width: 1440px;
+    width: 676px;
+    /* height: 600px; */
+}
+
+.img {
+    max-height: 100%;
+    width: 100%;
 }
 
 .description {
     background-color: hsl(0, 0%, 100%);
     text-align: left;
-    padding: 50px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .h1 {
     color: hsl(228, 12%, 48%);
-    /* font-size: ; */
+    font-size: 13px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
 
 .h2 {
     color: hsl(212, 21%, 14%);
-    /* font-size: ; */
+    font-size: 32px;
     font-family: 'Fraunces', serif;
     font-weight: 700;
+    line-height: 1;
 
 }
 
 .paragraph {
     color: hsl(228, 12%, 48%);
-    /* font-size: ; */
+    font-size: 15px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    line-height: 1.7;
 }
 
 .prices {
     display: flex;
     gap: 30px;
     justify-content: flex-start;
-    margin: auto 40px;
+    align-items: center;
+    margin: 0;
 }
 
 .discounted-price {
     color: hsl(158, 36%, 37%);
     font-family: 'Fraunces', serif;
     font-weight: 700;
-    /* font-size: ; */
+    font-size: 35px;
 }
 
 .original-price {
+    color: hsl(228, 12%, 48%);
     text-decoration: line-through;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    /* font-size: ; */
+    font-size: 13px;
 }
 
 .add-to-cart-btn {
     background-color: hsl(158, 36%, 37%);
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
-    /* font-size: ; */
+    border: none;
+    border-radius: 6px;
+    height: 53px;
 }
 
-.add-to-cart-text {
+.cart-img {
+    margin: 0 10px;
+}
+
+.add-to-cart-txt {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    /* font-size: ; */
+    font-size: 15px;
 }
+
+
+  
+ 
+
+@media (max-width: 600px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+    }
+    
+}
+
+/* desktop challenges
+border radius of the card 
+unequal heights
+
+mobile challenges
+switch image. <picture> works but can't remove the gap*/
