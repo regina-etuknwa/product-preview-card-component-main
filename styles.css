@@ -17,10 +17,11 @@ body {
 
 .card {
     display: flex;
-    border-radius: 5px;
+    border-radius: 10px;
+    overflow: hidden;
     margin: auto;
     width: 676px;
-    /* height: 600px; */
+    height: 500px;
 }
 
 .card > div {
@@ -113,20 +114,21 @@ body {
 
 
   
- 
-
 @media (max-width: 600px) {
     .card {
         display: flex;
         flex-direction: column;
-        width: 350px;
+        width: 370px;
+        height: auto;
+    }
+
+    .card > div {
+        width: 100%;
+    }
+
+    .description {
+        padding: 20px 25px;
+        gap: 15px;
     }
     
 }
-
-/* desktop challenges
-border radius of the card 
-unequal heights
-
-mobile challenges
-switch image. <picture> works but can't remove the gap*/
